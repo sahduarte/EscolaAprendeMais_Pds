@@ -1,0 +1,38 @@
+﻿<Window x:Class="Pds_Escola_AprendeMaisSoft.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pds_Escola_AprendeMaisSoft"
+        mc:Ignorable="d"
+        Title="Menu  - Escola Aprende Mais" Height="200" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Label Content="Escola Aprende Mais - Ensino de Qualidade" HorizontalAlignment="center" Padding="10" FontSize="20"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="0">
+                <Label Content="Selecione a função que deseja acessar" FontSize="16"/>
+                <Button x:Name="btEscola" Content="Cadastrar Escola" Padding="5" Margin="10 5 10 0" Click="btEscola_Click"/>
+                <Button x:Name="btCurso" Content="Cadastrar Curso" Padding="5" Margin="10 15 10 10" Click="btCurso_Click"/>
+               
+            </StackPanel>
+            <StackPanel Grid.Column="1" Margin="0">
+                <Label Content="" FontSize="16"/>
+                <Button x:Name="btListEs" Content="Selecionar Escola" Padding="5" Margin="10  0 10 10" Click="btListEs_Click"/>
+                <Button x:Name="btListCur" Content="Selecionar Curso" Padding="5" Margin="10  10 10 10" Click="btListCur_Click"/>
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+</Window>

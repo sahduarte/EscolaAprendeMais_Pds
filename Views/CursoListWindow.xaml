@@ -1,0 +1,39 @@
+﻿<Window x:Class="Pds_Escola_AprendeMaisSoft.Views.CursoListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pds_Escola_AprendeMaisSoft.Views"
+        mc:Ignorable="d"
+        Title="Lista de Cursos Cadastrados" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <Label Grid.Row="0" Content="Curso Cadastrados" FontSize="22" Padding="10" HorizontalAlignment="Center"/>
+        <DataGrid Grid.Row="1" x:Name="dataGridCursos" Margin="5" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Nome Curso" Binding="{Binding Nome}"/>
+                <DataGridTextColumn Header="Carga Horaria" Binding="{Binding Carga}"/>
+                <DataGridTextColumn Header="Turno" Binding="{Binding Turno}"/>
+                <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
+
+                <DataGridTemplateColumn Header="Botões">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content="Atualizar" Margin="5 0" Click="Button_Atualizar_Click"/>
+                                <Button Content="Excluir" Click="Button_Remover_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
